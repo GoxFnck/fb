@@ -8,54 +8,59 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
-echo -e "${MAGENTA}==========================================${NC}"
-echo -e "${MAGENTA}🚀  Encoded Python Bot - Auto Setup     ${NC}"
-echo -e "${MAGENTA}==========================================${NC}"
+echo -e "${BLUE}=========================================${NC}"
+echo -e "${BLUE}🚀  Facebook Number Checker - Auto Setup  ${NC}"
+echo -e "${BLUE}=========================================${NC}"
 echo ""
 
 # Step 1: Update and Upgrade Termux Packages
-echo -e "${YELLOW}[1/5] Updating system packages...${NC}"
-pkg update -y
-pkg upgrade -y
-echo -e "${GREEN}✅ System packages updated.${NC}"
+echo -e "${YELLOW}[1/6] Updating and upgrading system packages...${NC}"
+pkg update -y && pkg upgrade -y
+echo -e "${GREEN}✅ System packages updated successfully.${NC}"
 echo ""
 
-# Step 2: Install Python3 and Pip
-echo -e "${YELLOW}[2/5] Installing Python3 and Pip...${NC}"
-pkg install -y python3 python3-pip
-echo -e "${GREEN}✅ Python3 and Pip installed.${NC}"
-echo ""
-
-# Step 3: Setup Storage Access (Optional for Termux)
-echo -e "${YELLOW}[3/5] Setting up storage access...${NC}"
-if command -v termux-setup-storage &> /dev/null; then
-    termux-setup-storage 2>/dev/null || true
-    sleep 1
-fi
+# Step 2: Setup Storage Access
+echo -e "${YELLOW}[2/6] Setting up storage access...${NC}"
+echo -e "${BLUE}📢 Please allow storage permission if a popup appears!${NC}"
+termux-setup-storage
+sleep 2
 echo -e "${GREEN}✅ Storage setup completed.${NC}"
 echo ""
 
-# Step 4: Create Project Directories
-echo -e "${YELLOW}[4/5] Creating project directories...${NC}"
-mkdir -p logs outputs cache
-echo -e "${GREEN}✅ Directories created (logs/, outputs/, cache/).${NC}"
+# Step 3: Install Core Packages (Python, Git)
+echo -e "${YELLOW}[3/6] Installing Python and Git...${NC}"
+pkg install -y python git
+echo -e "${GREEN}✅ Python and Git installed.${NC}"
 echo ""
 
-# Step 5: Verify Installation
-echo -e "${YELLOW}[5/5] Verifying installation...${NC}"
-python3 --version
-pip --version
-echo -e "${GREEN}✅ Python and Pip verified.${NC}"
+# Step 4: Install Python Dependencies
+echo -e "${YELLOW}[4/6] Installing Selenium...${NC}"
+pip install selenium
+echo -e "${GREEN}✅ Selenium installed successfully.${NC}"
 echo ""
 
-echo -e "${MAGENTA}==========================================${NC}"
-echo -e "${GREEN}🎉  Setup Completed Successfully!        ${NC}"
-echo -e "${MAGENTA}==========================================${NC}"
+# Step 5: Add Extra Repositories (TUR, X11)
+echo -e "${YELLOW}[5/6] Adding tur-repo and x11-repo...${NC}"
+pkg install -y tur-repo x11-repo
+echo -e "${GREEN}✅ Repositories added.${NC}"
 echo ""
-echo -e "${BLUE}📝 To Run:${NC}"
-echo -e "  ${YELLOW}python3 bot.py${NC}"
+
+# Step 6: Install Chromium Browser
+echo -e "${YELLOW}[6/6] Installing Chromium Browser...${NC}"
+pkg install -y chromium
+echo -e "${GREEN}✅ Chromium installed successfully.${NC}"
 echo ""
-echo -e "${MAGENTA}==========================================${NC}"
+
+# Final Verification & Directory Setup
+echo -e "${YELLOW}📁 Creating logs and outputs directories...${NC}"
+mkdir -p logs outputs
+echo -e "${GREEN}✅ Directories created.${NC}"
+echo ""
+
+echo -e "${BLUE}=========================================${NC}"
+echo -e "${GREEN}🎉  Installation & Setup Completed!       ${NC}"
+echo -e "${BLUE}=========================================${NC}"
+echo -e "Run your script using: ${YELLOW}python bot.py${NC}"
+echo -e "${BLUE}=========================================${NC}"
