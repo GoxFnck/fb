@@ -36,9 +36,9 @@ echo -e "${GREEN}✅ Python and Git installed.${NC}"
 echo ""
 
 # Step 4: Install Python Dependencies
-echo -e "${YELLOW}[4/6] Installing Python Dependencies...${NC}"
-pip install selenium pyarmor
-echo -e "${GREEN}✅ Dependencies installed successfully.${NC}"
+echo -e "${YELLOW}[4/6] Installing Selenium...${NC}"
+pip install selenium
+echo -e "${GREEN}✅ Selenium installed successfully.${NC}"
 echo ""
 
 # Step 5: Add Extra Repositories (TUR, X11)
